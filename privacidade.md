@@ -20,7 +20,7 @@ Contato para qualquer assunto de privacidade, inclusive o exercício dos seus di
 - O app não tem cadastro, login nem conta de usuário.
 - O app exibe anúncios do Google AdMob, que coleta dados do aparelho conforme o seu consentimento.
 - A assinatura Premium é processada pelo Google Play. O app não tem acesso aos dados do seu cartão.
-- Relatórios de falhas são enviados ao Firebase Crashlytics para corrigirmos erros.
+- Relatórios de falhas são enviados ao Firebase Crashlytics para corrigirmos erros, e estatísticas de uso ao Google Analytics for Firebase para entendermos como o app é usado. Nenhum dos dois inclui os valores dos seus cálculos.
 - Não vendemos dados pessoais.
 
 ## 3. Dados tratados e finalidades
@@ -44,6 +44,8 @@ Esses dados ficam no armazenamento privado do app e não são enviados para a Ro
 
 **Firebase Crashlytics (relatórios de falhas).** Quando o app apresenta uma falha, o Crashlytics coleta o registro técnico do erro, o modelo do aparelho, a versão do Android e do app e um identificador de instalação gerado aleatoriamente. Esses relatórios não incluem os valores dos seus cálculos. O Google retém esses dados por 90 dias.
 
+**Google Analytics for Firebase (estatísticas de uso).** O Analytics registra como o app é usado: telas abertas, tipo de cálculo feito (por exemplo, "rescisão" ou "férias"), resultados salvos, visualizações da tela Premium e anúncios exibidos, junto com um identificador de instalação gerado aleatoriamente, o modelo do aparelho, a versão do Android e do app e a região aproximada. Esses registros não incluem os valores que você digita nem os resultados dos cálculos. Usamos essas estatísticas de forma agregada, para decidir melhorias no app.
+
 O tratamento feito pelo Google segue a política de privacidade do Google:
 
 - Política de privacidade do Google: [https://policies.google.com/privacy](https://policies.google.com/privacy)
@@ -54,7 +56,7 @@ O tratamento feito pelo Google segue a política de privacidade do Google:
 
 - **Consentimento** (art. 7º, I, LGPD): anúncios personalizados.
 - **Execução de contrato** (art. 7º, V): assinatura Premium.
-- **Legítimo interesse** (art. 7º, IX): relatórios de falhas, para manter o app funcionando corretamente, e anúncios não personalizados, que custeiam a versão gratuita.
+- **Legítimo interesse** (art. 7º, IX): relatórios de falhas, para manter o app funcionando corretamente; estatísticas de uso agregadas, para melhorar o app; e anúncios não personalizados, que custeiam a versão gratuita.
 
 ## 5. Consentimento para anúncios
 
@@ -72,6 +74,7 @@ Os serviços do Google podem processar dados fora do Brasil, com as garantias pr
 
 - **Dados no aparelho:** ficam guardados até você excluí-los. Para excluir um cálculo, deslize-o para a esquerda no Histórico. Para apagar tudo, limpe os dados do app nas configurações do Android ou desinstale o app.
 - **Relatórios de falhas:** são retidos pelo Google por 90 dias.
+- **Estatísticas de uso:** os dados ligados ao identificador de instalação são retidos pelo Google Analytics por 2 meses. Depois disso ficam apenas relatórios agregados.
 - **Dados de anúncios e de pagamento:** seguem os prazos de retenção do Google.
 
 Como o app não tem contas de usuário, não há conta para excluir.
