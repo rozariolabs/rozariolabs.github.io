@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <clipPath id="c"><rect width="64" height="64" rx="16"/></clipPath>
+  <g clip-path="url(#c)">
+    <rect width="32" height="32" fill="#49CBEB"/>
+    <rect x="32" width="32" height="32" fill="#F7B3E1"/>
+    <rect y="32" width="32" height="32" fill="#85F5CC"/>
+    <rect x="32" y="32" width="32" height="32" fill="#0F1214"/>
+  </g>
+  <g font-family="Figtree, system-ui, sans-serif" font-weight="800" font-size="20" text-anchor="middle" dominant-baseline="central" fill="#0F1214">
+    <text x="16" y="16">+</text>
+    <text x="48" y="16">−</text>
+    <text x="16" y="48">×</text>
+    <text x="48" y="48" fill="#FFFFFF">=</text>
+  </g>
+</svg>

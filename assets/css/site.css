@@ -1,0 +1,130 @@
+/* Identidade do Meu Acerto (tokens do app: lib/ui/theme/tokens.dart). */
+
+@font-face { font-family: "Figtree"; font-weight: 400; font-display: swap; src: url("/assets/fonts/Figtree-Regular.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 600; font-display: swap; src: url("/assets/fonts/Figtree-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 700; font-display: swap; src: url("/assets/fonts/Figtree-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Figtree"; font-weight: 800; font-display: swap; src: url("/assets/fonts/Figtree-ExtraBold.ttf") format("truetype"); }
+
+:root {
+  color-scheme: light;
+  --fundo: linear-gradient(180deg, #D4EFF6 0%, #F3F8FA 52%, #FBEEF6 100%);
+  --fundo-base: #F3F8FA;
+  --cartao: #FFFFFF;
+  --texto: #0F1214;
+  --texto-2: #53646A;
+  --linha: #CFE6EC;
+  --botao: #0F1214;
+  --botao-texto: #FFFFFF;
+  --sombra-cartao: 0 4px 16px rgba(15, 18, 20, .06);
+  --sombra-logo: 0 8px 20px rgba(15, 18, 20, .15);
+  --q1: #49CBEB;
+  --q2: #F7B3E1;
+  --q3: #85F5CC;
+  --q4: #0F1214;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --fundo: #050708;
+    --fundo-base: #050708;
+    --cartao: #182023;
+    --texto: #EEF4F6;
+    --texto-2: #93A4AA;
+    --linha: #253036;
+    --botao: #FFFFFF;
+    --botao-texto: #0F1214;
+    --sombra-cartao: none;
+    --sombra-logo: none;
+    --q1: #3DB4D2;
+    --q2: #E39BCB;
+    --q3: #74E2BB;
+    --q4: #182023;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--fundo-base); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--texto);
+  -webkit-text-size-adjust: 100%;
+}
+
+.ceu { background: var(--fundo); background-attachment: fixed; }
+
+a { color: inherit; text-underline-offset: 3px; }
+
+/* Logo 2b: grade 2×2 com + − × =, raio de 25% e glifos em 28,57% do tamanho. */
+.logo {
+  --t: 72px;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: var(--t);
+  height: var(--t);
+  flex: none;
+  border-radius: calc(var(--t) * .25);
+  overflow: hidden;
+  box-shadow: var(--sombra-logo);
+  font-family: "Figtree", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: calc(var(--t) * .2857);
+  line-height: 1;
+  color: #0F1214;
+}
+.logo > span { display: flex; align-items: center; justify-content: center; }
+.logo > span:nth-child(1) { background: var(--q1); }
+.logo > span:nth-child(2) { background: var(--q2); }
+.logo > span:nth-child(3) { background: var(--q3); }
+.logo > span:nth-child(4) { background: var(--q4); color: #FFFFFF; }
+.logo--sm { --t: 28px; box-shadow: none; }
+
+/* Botão pílula do Google Play. */
+.btn-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: var(--botao);
+  color: var(--botao-texto);
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* Links do rodapé e do fim das páginas de texto. */
+.links { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 14px; color: var(--texto-2); }
+.links a { color: var(--texto); font-weight: 600; text-decoration: underline; }
+.foot { font-size: 12px; color: var(--texto-2); }
+
+/* Cartão de leitura dos textos longos. */
+.card {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  border-radius: 20px;
+  background: var(--cartao);
+  box-shadow: var(--sombra-cartao);
+  overflow-wrap: anywhere;
+}
+
+.card table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 12px 0 16px;
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: normal;
+}
+.card th, .card td { padding: 8px 10px; border: 1px solid var(--linha); text-align: left; vertical-align: top; min-width: 140px; }
+.card th { font-weight: 700; }

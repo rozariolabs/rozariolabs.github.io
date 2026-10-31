@@ -1,0 +1,8 @@
+title: Meu Acerto
+lang: pt-BR
+markdown: kramdown
+# Link do app na Play Store. Vazio: o botão "Disponível no Google Play" não aparece.
+play_url: ""
+exclude:
+  - tools
+  - README.md
