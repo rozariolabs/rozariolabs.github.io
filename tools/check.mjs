@@ -134,7 +134,96 @@ const grupos = {
       ok: () => tem('404.html', 'href="/"') && /^permalink:\s*\/404\.html\s*$/m.test(ler('404.html')) && /^layout:\s*base\s*$/m.test(ler('404.html')),
     },
   ],
+  legal: [
+    {
+      nome: 'legal.html: layout base, cabeçalho, título, data, conteúdo e links do fim',
+      ok: () =>
+        /^layout:\s*base\s*$/m.test(ler('_layouts/legal.html')) &&
+        tem(
+          '_layouts/legal.html',
+          'href="/"',
+          'logo.html size="sm"',
+          '{{ page.title }}',
+          'Última atualização: {{ page.updated }}',
+          '{{ content }}',
+          'href="/privacidade/"',
+          'href="/termos/"',
+        ),
+    },
+    ...[
+      ['privacidade.md', '/privacidade/', 'Política de privacidade', 11, '1. Quem é o responsável', '11. Alterações nesta política'],
+      ['termos.md', '/termos/', 'Termos de uso', 13, '1. O que é o app', '13. Contato'],
+    ].flatMap(([arq, permalink, titulo, secoes, primeira, ultima]) => [
+      {
+        nome: `${arq}: front matter`,
+        ok: () => {
+          const fm = frontMatter(ler(arq));
+          return fm.layout === 'legal' && fm.permalink === permalink && fm.title === titulo && fm.updated === '31 de outubro de 2026';
+        },
+      },
+      {
+        nome: `${arq}: ${secoes} seções, sem título nem data no corpo`,
+        ok: () => {
+          const corpo = semFrontMatter(ler(arq));
+          const h2 = corpo.match(/^## .*/gm) ?? [];
+          return (
+            !/^# /m.test(corpo) &&
+            !corpo.includes('Última atualização') &&
+            h2.length === secoes &&
+            h2[0] === `## ${primeira}` &&
+            h2.at(-1) === `## ${ultima}`
+          );
+        },
+      },
+      {
+        nome: `${arq}: conteúdo igual ao original de meu-acerto/docs/legal`,
+        ok: () => {
+          const orig = join(root, '..', 'meu-acerto', 'docs', 'legal', arq === 'termos.md' ? 'termos-de-uso.md' : 'politica-de-privacidade.md');
+          if (!existsSync(orig)) return 'pulada';
+          const original = readFileSync(orig, 'utf8')
+            .split('\n')
+            .filter((l) => !/^# /.test(l) && !/^Última atualização/.test(l))
+            .join('\n');
+          return normalizar(original) === normalizar(semFrontMatter(ler(arq)));
+        },
+      },
+    ]),
+    {
+      nome: 'privacidade.md: responsável, e-mail e links do Google',
+      ok: () => {
+        const c = ler('privacidade.md');
+        return (
+          tem('privacidade.md', 'gabrielsilvarozario@gmail.com', 'Rozario Labs') &&
+          ['https://policies.google.com/privacy', 'https://policies.google.com/technologies/partner-sites', 'https://firebase.google.com/support/privacy'].every(
+            (u) => c.includes(`](${u})`),
+          )
+        );
+      },
+    },
+    { nome: 'termos.md: link para a Política', ok: () => tem('termos.md', '[Política de privacidade](/privacidade/)') },
+  ],
 };
+
+function frontMatter(texto) {
+  const m = texto.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!m) return {};
+  return Object.fromEntries(
+    m[1].split(/\r?\n/).map((l) => l.match(/^(\w+):\s*(.*)$/)).filter(Boolean).map(([, k, v]) => [k, v.replace(/^["']|["']$/g, '')]),
+  );
+}
+
+function semFrontMatter(texto) {
+  return texto.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
+}
+
+// Compara só o texto: desfaz links Markdown e normaliza espaços.
+function normalizar(texto) {
+  return texto
+    .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g, (_, rotulo, url) => (rotulo === url ? url : rotulo))
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
 
 
 const args = process.argv.slice(2);

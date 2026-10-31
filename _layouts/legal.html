@@ -1,0 +1,27 @@
+---
+layout: base
+---
+<div class="legal">
+  <header class="legal-header">
+    <a href="/" aria-label="Meu Acerto, página inicial">
+      <span class="legal-header__voltar" aria-hidden="true">‹</span>
+      {% include logo.html size="sm" %}
+      <span>Meu Acerto</span>
+    </a>
+  </header>
+  <main>
+    <article class="card">
+      <h1>{{ page.title }}</h1>
+      <p class="card__data">Última atualização: {{ page.updated }}</p>
+      {{ content }}
+    </article>
+  </main>
+  <footer class="legal__pe">
+    <nav class="links" aria-label="Documentos">
+      {% if page.url != "/privacidade/" %}<a href="/privacidade/">Política de privacidade</a>{% endif %}
+      {% if page.url != "/termos/" %}<a href="/termos/">Termos de uso</a>{% endif %}
+      <a href="/">Página inicial</a>
+    </nav>
+    <p class="foot">© 2026 Rozario Labs</p>
+  </footer>
+</div>
