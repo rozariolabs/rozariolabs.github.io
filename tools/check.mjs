@@ -202,6 +202,42 @@ const grupos = {
     },
     { nome: 'termos.md: link para a Política', ok: () => tem('termos.md', '[Política de privacidade](/privacidade/)') },
   ],
+  live: [
+    ...[
+      ['/', 'Meu Acerto'],
+      ['/privacidade/', 'Política de privacidade'],
+      ['/termos/', 'Termos de uso'],
+    ].map(([caminho, texto]) => ({
+      nome: `no ar: ${caminho} responde 200 com "${texto}", pt-BR, sem recurso externo e sem botão do Play`,
+      ok: async (base) => {
+        const r = await fetch(base + caminho);
+        const html = await r.text();
+        return (
+          r.status === 200 &&
+          html.includes(texto) &&
+          html.includes('lang="pt-BR"') &&
+          violacoesExternas(html).length === 0 &&
+          !html.includes('Disponível no Google Play')
+        );
+      },
+    })),
+    ...['/privacidade', '/termos'].map((caminho) => ({
+      nome: `no ar: ${caminho} sem barra final abre a página`,
+      ok: async (base) => (await fetch(base + caminho)).status === 200,
+    })),
+    {
+      nome: 'no ar: endereço inexistente dá 404 com link para o início',
+      ok: async (base) => {
+        const r = await fetch(base + '/pagina-que-nao-existe');
+        const html = await r.text();
+        return r.status === 404 && html.includes('Página não encontrada') && html.includes('href="/"');
+      },
+    },
+    ...['/assets/css/site.css', '/assets/fonts/Figtree-Bold.ttf', '/favicon.svg'].map((caminho) => ({
+      nome: `no ar: ${caminho} responde 200`,
+      ok: async (base) => (await fetch(base + caminho)).status === 200,
+    })),
+  ],
 };
 
 function frontMatter(texto) {
