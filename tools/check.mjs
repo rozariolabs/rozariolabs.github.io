@@ -101,6 +101,39 @@ const grupos = {
       },
     },
   ],
+  home: [
+    {
+      nome: 'index.html: layout base e description',
+      ok: () => /^---[\s\S]*?^layout:\s*base\s*$[\s\S]*?^---/m.test(ler('index.html')) && /^description:.*rescisão/m.test(ler('index.html')),
+    },
+    {
+      nome: 'index.html: logo, título, frase, links, e-mail e rodapé',
+      ok: () =>
+        tem(
+          'index.html',
+          'logo.html size="lg"',
+          '<h1>Meu Acerto</h1>',
+          'Calcule rescisão, férias, 13º, hora extra e salário líquido com o passo a passo de cada valor.',
+          'href="/termos/"',
+          'href="/privacidade/"',
+          'mailto:gabrielsilvarozario@gmail.com',
+          '© 2026 Rozario Labs',
+        ),
+    },
+    {
+      nome: 'index.html: botão do Play só quando play_url está preenchido',
+      ok: () => {
+        const html = ler('index.html');
+        const bloco = html.match(/{%\s*if site\.play_url != ""\s*%}([\s\S]*?){%\s*endif\s*%}/);
+        if (!bloco || !bloco[1].includes('Disponível no Google Play') || !bloco[1].includes('href="{{ site.play_url }}"')) return false;
+        return !html.replace(bloco[0], '').includes('Disponível no Google Play');
+      },
+    },
+    {
+      nome: '404.html: permalink, layout base e link para o início',
+      ok: () => tem('404.html', 'href="/"') && /^permalink:\s*\/404\.html\s*$/m.test(ler('404.html')) && /^layout:\s*base\s*$/m.test(ler('404.html')),
+    },
+  ],
 };
 
 

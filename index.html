@@ -1,0 +1,22 @@
+---
+layout: base
+description: Meu Acerto calcula rescisão, férias, 13º, hora extra e salário líquido com o passo a passo de cada valor.
+---
+<main class="home">
+  <div class="home__topo">
+    {% include logo.html size="lg" %}
+    <h1>Meu Acerto</h1>
+    <p class="home__frase">Calcule rescisão, férias, 13º, hora extra e salário líquido com o passo a passo de cada valor.</p>
+    {% if site.play_url != "" %}
+    <a class="btn-play" href="{{ site.play_url }}"><span aria-hidden="true">▶</span> Disponível no Google Play</a>
+    {% endif %}
+  </div>
+  <footer class="home__pe">
+    <nav class="links" aria-label="Documentos e contato">
+      <a href="/termos/">Termos de uso</a>
+      <a href="/privacidade/">Política de privacidade</a>
+      <a class="links__email" href="mailto:gabrielsilvarozario@gmail.com">gabrielsilvarozario@gmail.com</a>
+    </nav>
+    <p class="foot">© 2026 Rozario Labs</p>
+  </footer>
+</main>

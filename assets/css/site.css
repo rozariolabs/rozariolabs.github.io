@@ -106,6 +106,26 @@ a { color: inherit; text-underline-offset: 3px; }
 .links a { color: var(--texto); font-weight: 600; text-decoration: underline; }
 .foot { font-size: 12px; color: var(--texto-2); }
 
+/* Página inicial e 404: tudo centralizado, pé empurrado para baixo. */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px 26px 24px;
+  text-align: center;
+}
+.home__topo { display: flex; flex-direction: column; align-items: center; padding-top: 6vh; }
+.home h1 { margin: 20px 0 8px; font-size: 30px; font-weight: 700; line-height: 1.05; letter-spacing: -.6px; }
+.home h1.home__titulo-menor { font-size: 26px; letter-spacing: -.5px; }
+.home__frase { margin: 0 0 24px; font-size: 16px; line-height: 1.45; color: var(--texto-2); max-width: 340px; }
+.home__pe { margin-top: auto; padding-top: 40px; }
+.home__pe .foot { margin: 14px 0 0; }
+.links a.links__email { font-weight: 400; color: var(--texto-2); }
+
 /* Cartão de leitura dos textos longos. */
 .card {
   max-width: 680px;
