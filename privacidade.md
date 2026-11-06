@@ -2,7 +2,7 @@
 layout: legal
 title: Política de privacidade
 permalink: /privacidade/
-updated: 31 de outubro de 2026
+updated: 6 de novembro de 2026
 description: Quais dados o app Meu Acerto trata, por que e quais são os seus direitos pela LGPD.
 ---
 
@@ -29,7 +29,7 @@ Contato para qualquer assunto de privacidade, inclusive o exercício dos seus di
 
 | Dado | Finalidade |
 |---|---|
-| Valores informados nos cálculos (salário, datas, dependentes, descontos e outros campos) | Fazer o cálculo e mostrar o resultado |
+| Valores informados nos cálculos (salário, datas, dependentes, descontos e outros campos) | Fazer o cálculo, mostrar o resultado e preencher o próximo cálculo com os últimos valores usados |
 | Cálculos salvos no histórico | Permitir consultar cálculos anteriores |
 | Preferências (tema, modo de preenchimento, introdução já vista) | Manter as suas escolhas |
 | Situação da assinatura Premium | Liberar o app sem anúncios, inclusive sem internet |
@@ -42,9 +42,11 @@ Esses dados ficam no armazenamento privado do app e não são enviados para a Ro
 
 **Google Play Billing (assinatura).** A compra, a renovação e o cancelamento da assinatura são feitos pelo Google Play, que trata os seus dados de pagamento. O app recebe apenas a confirmação de que a assinatura está ativa.
 
+**Google Play In-App Review (avaliação).** Depois de alguns resultados salvos, o app pode pedir que você avalie o Meu Acerto. O pedido é exibido pelo Google Play, e a nota e o comentário, se você enviar, vão para o Google Play com a sua conta. O app não recebe a nota, o comentário nem a informação de que você avaliou.
+
 **Firebase Crashlytics (relatórios de falhas).** Quando o app apresenta uma falha, o Crashlytics coleta o registro técnico do erro, o modelo do aparelho, a versão do Android e do app e um identificador de instalação gerado aleatoriamente. Esses relatórios não incluem os valores dos seus cálculos. O Google retém esses dados por 90 dias.
 
-**Google Analytics for Firebase (estatísticas de uso).** O Analytics registra como o app é usado: telas abertas, tipo de cálculo feito (por exemplo, "rescisão" ou "férias"), resultados salvos, visualizações da tela Premium e anúncios exibidos, junto com um identificador de instalação gerado aleatoriamente, o modelo do aparelho, a versão do Android e do app e a região aproximada. Esses registros não incluem os valores que você digita nem os resultados dos cálculos. Usamos essas estatísticas de forma agregada, para decidir melhorias no app.
+**Google Analytics for Firebase (estatísticas de uso).** O Analytics registra como o app é usado: telas abertas, conclusão da introdução, tipo de cálculo feito (por exemplo, "rescisão" ou "férias"), resultados salvos, visualizações da tela Premium, início e conclusão da assinatura, com o plano escolhido (mensal ou anual), e anúncios exibidos, junto com um identificador de instalação gerado aleatoriamente, o identificador de publicidade do Android, o modelo do aparelho, a versão do Android e do app e a região aproximada. Esses registros não incluem os valores que você digita nem os resultados dos cálculos. Usamos essas estatísticas de forma agregada, para decidir melhorias no app.
 
 O tratamento feito pelo Google segue a política de privacidade do Google:
 

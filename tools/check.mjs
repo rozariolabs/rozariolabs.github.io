@@ -151,14 +151,14 @@ const grupos = {
         ),
     },
     ...[
-      ['privacidade.md', '/privacidade/', 'Política de privacidade', 11, '1. Quem é o responsável', '11. Alterações nesta política'],
-      ['termos.md', '/termos/', 'Termos de uso', 13, '1. O que é o app', '13. Contato'],
-    ].flatMap(([arq, permalink, titulo, secoes, primeira, ultima]) => [
+      ['privacidade.md', '/privacidade/', 'Política de privacidade', 11, '1. Quem é o responsável', '11. Alterações nesta política', '6 de novembro de 2026'],
+      ['termos.md', '/termos/', 'Termos de uso', 13, '1. O que é o app', '13. Contato', '31 de outubro de 2026'],
+    ].flatMap(([arq, permalink, titulo, secoes, primeira, ultima, atualizada]) => [
       {
         nome: `${arq}: front matter`,
         ok: () => {
           const fm = frontMatter(ler(arq));
-          return fm.layout === 'legal' && fm.permalink === permalink && fm.title === titulo && fm.updated === '31 de outubro de 2026';
+          return fm.layout === 'legal' && fm.permalink === permalink && fm.title === titulo && fm.updated === atualizada;
         },
       },
       {
