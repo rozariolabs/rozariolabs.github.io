@@ -2,7 +2,7 @@
 layout: legal
 title: Política de privacidade
 permalink: /privacidade/
-updated: 6 de novembro de 2026
+updated: 7 de novembro de 2026
 description: Quais dados o app Meu Acerto trata, por que e quais são os seus direitos pela LGPD.
 ---
 
@@ -10,7 +10,7 @@ Esta política explica quais dados o aplicativo Meu Acerto ("app") trata, por qu
 
 ## 1. Quem é o responsável
 
-O Meu Acerto é desenvolvido por **Rozario Labs**, controlador dos dados tratados pelo app.
+O Meu Acerto é desenvolvido por **Gabriel Silva do Rozario**, pessoa física, sob a marca **Rozario Labs** ("Rozario Labs"), controlador dos dados tratados pelo app.
 
 Contato para qualquer assunto de privacidade, inclusive o exercício dos seus direitos: **gabrielsilvarozario@gmail.com**. Esse e-mail também é o canal do encarregado pelo tratamento de dados.
 

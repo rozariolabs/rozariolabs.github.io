@@ -151,8 +151,8 @@ const grupos = {
         ),
     },
     ...[
-      ['privacidade.md', '/privacidade/', 'Política de privacidade', 11, '1. Quem é o responsável', '11. Alterações nesta política', '6 de novembro de 2026'],
-      ['termos.md', '/termos/', 'Termos de uso', 13, '1. O que é o app', '13. Contato', '31 de outubro de 2026'],
+      ['privacidade.md', '/privacidade/', 'Política de privacidade', 11, '1. Quem é o responsável', '11. Alterações nesta política', '7 de novembro de 2026'],
+      ['termos.md', '/termos/', 'Termos de uso', 13, '1. O que é o app', '13. Contato', '7 de novembro de 2026'],
     ].flatMap(([arq, permalink, titulo, secoes, primeira, ultima, atualizada]) => [
       {
         nome: `${arq}: front matter`,

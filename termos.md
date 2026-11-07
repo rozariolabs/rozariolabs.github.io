@@ -2,11 +2,11 @@
 layout: legal
 title: Termos de uso
 permalink: /termos/
-updated: 31 de outubro de 2026
+updated: 7 de novembro de 2026
 description: Regras de uso do app Meu Acerto, assinatura Premium e limitação de responsabilidade.
 ---
 
-Estes termos regem o uso do aplicativo Meu Acerto ("app"), desenvolvido por **Rozario Labs**. Ao usar o app, você concorda com estes termos. Se não concordar, não use o app.
+Estes termos regem o uso do aplicativo Meu Acerto ("app"), desenvolvido por **Gabriel Silva do Rozario**, pessoa física, sob a marca **Rozario Labs** ("Rozario Labs"). Ao usar o app, você concorda com estes termos. Se não concordar, não use o app.
 
 ## 1. O que é o app
 
