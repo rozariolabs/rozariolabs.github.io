@@ -2,7 +2,7 @@
 layout: legal
 title: Política de privacidade
 permalink: /privacidade/
-updated: 7 de novembro de 2026
+updated: 8 de novembro de 2026
 description: Quais dados o app Meu Acerto trata, por que e quais são os seus direitos pela LGPD.
 ---
 
@@ -46,7 +46,7 @@ Esses dados ficam no armazenamento privado do app e não são enviados para a Ro
 
 **Firebase Crashlytics (relatórios de falhas).** Quando o app apresenta uma falha, o Crashlytics coleta o registro técnico do erro, o modelo do aparelho, a versão do Android e do app e um identificador de instalação gerado aleatoriamente. Esses relatórios não incluem os valores dos seus cálculos. O Google retém esses dados por 90 dias.
 
-**Google Analytics for Firebase (estatísticas de uso).** O Analytics registra como o app é usado: telas abertas, conclusão da introdução, tipo de cálculo feito (por exemplo, "rescisão" ou "férias"), resultados salvos, visualizações da tela Premium, início e conclusão da assinatura, com o plano escolhido (mensal ou anual), e anúncios exibidos, junto com um identificador de instalação gerado aleatoriamente, o identificador de publicidade do Android, o modelo do aparelho, a versão do Android e do app e a região aproximada. Esses registros não incluem os valores que você digita nem os resultados dos cálculos. Usamos essas estatísticas de forma agregada, para decidir melhorias no app.
+**Google Analytics for Firebase (estatísticas de uso).** O Analytics registra como o app é usado: telas abertas, conclusão da introdução, tipo de cálculo feito (por exemplo, "rescisão" ou "férias"), resultados salvos, visualizações da tela Premium, início e conclusão da assinatura, com o plano escolhido (mensal ou anual), compras e assinaturas feitas no app, com o identificador e o nome do produto e o preço, e anúncios exibidos, junto com um identificador de instalação gerado aleatoriamente, o identificador de publicidade do Android, o modelo do aparelho, a versão do Android e do app e a região aproximada. Esses registros não incluem os valores que você digita nem os resultados dos cálculos. Usamos essas estatísticas de forma agregada, para decidir melhorias no app.
 
 O tratamento feito pelo Google segue a política de privacidade do Google:
 
@@ -85,7 +85,11 @@ Como o app não tem contas de usuário, não há conta para excluir.
 
 Pela LGPD, você pode pedir: confirmação de que tratamos seus dados, acesso, correção, anonimização, bloqueio ou eliminação de dados desnecessários, portabilidade, informação sobre compartilhamento e revogação do consentimento. Também pode reclamar na Autoridade Nacional de Proteção de Dados (ANPD).
 
-Como a Rozario Labs não guarda os dados dos cálculos, a maior parte deles pode ser consultada e apagada por você mesmo no aparelho. Para os outros pedidos, escreva para **gabrielsilvarozario@gmail.com**. Responderemos em até 15 dias.
+Os dados dos cálculos não chegam à Rozario Labs: você mesmo os consulta e apaga no aparelho, como explica a seção 7.
+
+Os dados coletados pelos serviços do Google (seção 3.2) ficam ligados a identificadores aleatórios do aparelho, e não a um nome ou a uma conta. Por isso, a Rozario Labs não consegue localizar esses dados por pessoa e não oferece um meio de solicitar a exclusão deles. Eles deixam de ser mantidos nos prazos da seção 7. Você também pode recusar anúncios personalizados e redefinir ou excluir o identificador de publicidade, como explica a seção 5.
+
+Para os outros pedidos, escreva para **gabrielsilvarozario@gmail.com**. Responderemos em até 15 dias.
 
 ## 9. Segurança
 
